@@ -1,0 +1,17 @@
+node_modules/
+.next/
+content/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+*.log
+*.db
+
+# mídias e rascunhos soltos na raiz
+/*.mp4
+/favicon.png
+/image.png
+/logo.png

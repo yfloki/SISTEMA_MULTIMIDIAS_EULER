@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #07080f;
+  --surface: #10121d;
+  --surface-2: #181b2a;
+  --text: #f2f3f7;
+  --muted: #8b90a5;
+  --accent: #7c5cff;
+  --accent-2: #00e0c6;
+  --radius: 12px;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface-2);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent-2);
+}
+
+@utility glow {
+  box-shadow: 0 0 24px 0 color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+@utility glass {
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+}
+
+@utility text-gradient {
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+html, body { background: var(--bg); color: var(--text); }
+body { font-family: var(--font-inter), system-ui, sans-serif; }
+
+.font-display { font-family: var(--font-outfit), var(--font-inter), sans-serif; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* vinheta de abertura da marca (BrandIntro) */
+@keyframes brand-intro {
+  0%   { opacity: 0; transform: scale(0.82); filter: brightness(0.5) blur(8px); }
+  35%  { opacity: 1; }
+  100% { opacity: 1; transform: scale(1); filter: brightness(1.1) blur(0); }
+}

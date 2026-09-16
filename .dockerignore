@@ -1,0 +1,18 @@
+node_modules
+**/node_modules
+.next
+**/.next
+content
+docs
+*.log
+*.db
+*.md
+
+# nada de arquivos/pastas ocultos no contexto de build (.git, .env, configs locais)
+.*
+
+# mídias soltas na raiz
+/*.mp4
+/favicon.png
+/image.png
+/logo.png
